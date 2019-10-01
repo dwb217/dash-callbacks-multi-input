@@ -11,7 +11,7 @@ tabtitle = 'travel guide!'
 list_of_countries=['syria', 'yemen', 'morocco']
 list_of_places=['mosque', 'market', 'mountain']
 sourceurl = 'https://dash.plot.ly/getting-started-part-2'
-githublink = 'https://github.com/austinlasseter/dash-callbacks-multi-input'
+githublink = 'https://github.com/dwb217/dash-callbacks-multi-input'
 
 
 ########## Set up the chart
