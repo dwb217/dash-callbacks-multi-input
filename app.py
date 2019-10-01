@@ -6,7 +6,7 @@ from dash.dependencies import Input, Output, State
 
 ########### Define your variables ######
 
-myheading1='How to use callbacks with multiple inputs'
+myheading1='How to use callbacks with multiple inputs in two places that used to be nice and one place that still is'
 tabtitle = 'travel guide!'
 list_of_countries=['syria', 'yemen', 'morocco']
 list_of_places=['mosque', 'market', 'mountain']
