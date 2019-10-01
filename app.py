@@ -7,9 +7,9 @@ from dash.dependencies import Input, Output, State
 ########### Define your variables ######
 
 myheading1='How to use callbacks with multiple inputs'
-tabtitle = 'lightsabers!'
-list_of_colors=['red', 'green', 'blue']
-list_of_numbers=['one', 'two', 'three']
+tabtitle = 'travel guide!'
+list_of_countries=['syria', 'yemen', 'morocco']
+list_of_places=['mosque', 'market', 'mountain']
 sourceurl = 'https://dash.plot.ly/getting-started-part-2'
 githublink = 'https://github.com/austinlasseter/dash-callbacks-multi-input'
 
@@ -29,22 +29,22 @@ app.layout = html.Div(children=[
     html.Div([
         html.Div([
             dcc.RadioItems(
-                id='pick-a-color',
+                id='pick-a-country',
                 options=[
-                        {'label':list_of_colors[0], 'value':list_of_colors[0]},
-                        {'label':list_of_colors[1], 'value':list_of_colors[1]},
-                        {'label':list_of_colors[2], 'value':list_of_colors[2]},
+                        {'label':list_of_countries[0], 'value':list_of_countries[0]},
+                        {'label':list_of_countries[1], 'value':list_of_countries[1]},
+                        {'label':list_of_countries[2], 'value':list_of_countries[2]},
                         ],
                 value='choose',
                 ),
         ],className='two columns'),
         html.Div([
             dcc.RadioItems(
-                id='pick-a-number',
+                id='pick-a-place',
                 options=[
-                        {'label':list_of_numbers[0], 'value':list_of_numbers[0]},
-                        {'label':list_of_numbers[1], 'value':list_of_numbers[1]},
-                        {'label':list_of_numbers[2], 'value':list_of_numbers[2]},
+                        {'label':list_of_places[0], 'value':list_of_places[0]},
+                        {'label':list_of_places[1], 'value':list_of_places[1]},
+                        {'label':list_of_places[2], 'value':list_of_places[2]},
                         ],
                 value='one',
                 ),
@@ -63,10 +63,10 @@ app.layout = html.Div(children=[
 ########## Define Callback
 
 @app.callback(Output('your_output_here', 'children'),
-              [Input('pick-a-color', 'value'),
-               Input('pick-a-number', 'value')])
-def radio_results(color_you_picked, number_you_picked):
-    image_you_chose=f'{color_you_picked}-{number_you_picked}.jpg'
+              [Input('pick-a-country', 'value'),
+               Input('pick-a-place', 'value')])
+def radio_results(country_you_picked, plae_you_picked):
+    image_you_chose=f'{country_you_picked}-{place_you_picked}.jpg'
     return html.Img(src=app.get_asset_url(image_you_chose), style={'width': 'auto', 'height': 'auto'}),
 
 ############ Deploy
