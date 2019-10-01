@@ -67,9 +67,11 @@ app.layout = html.Div(children=[
                Input('pick-a-place', 'value')])
 def radio_results(country_you_picked, place_you_picked):
     if country_you_picked=='choose' and place_you_picked!='one':
-        print('Please pick a place')
+        image_you_chose=choose-one.jpg'
+        return html.Img(src=app.get_asset_url(image_you_chose), style={'width': '50%', 'height': 'auto'}),
     elif country_you_picked!='choose' and place_you_picked=='one':
-        print('Please pick a country')
+        image_you_chose=choose-one.jpg'
+        return html.Img(src=app.get_asset_url(image_you_chose), style={'width': '50%', 'height': 'auto'}),
     else:
         image_you_chose=f'{country_you_picked}-{place_you_picked}.jpg'
         return html.Img(src=app.get_asset_url(image_you_chose), style={'width': '50%', 'height': 'auto'}),
