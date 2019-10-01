@@ -65,7 +65,7 @@ app.layout = html.Div(children=[
 @app.callback(Output('your_output_here', 'children'),
               [Input('pick-a-country', 'value'),
                Input('pick-a-place', 'value')])
-def radio_results(country_you_picked, plae_you_picked):
+def radio_results(country_you_picked, place_you_picked):
     image_you_chose=f'{country_you_picked}-{place_you_picked}.jpg'
     return html.Img(src=app.get_asset_url(image_you_chose), style={'width': 'auto', 'height': 'auto'}),
 
